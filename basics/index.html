@@ -1,5 +1,35 @@
-<ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('php')
+    addLanguage('goLang')
+
+    function optimise(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+        
+    }
+    optimise('Blockchain')
+
+
+  const liText = document.querySelector('li:nth-child(2)')
+  console.log(liText)
+</script>
+</html>
