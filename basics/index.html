@@ -6,30 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <ul class="language">
-        <li>JavaScript</li>
-    </ul>
+    <h1>Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
 </body>
 <script>
-    function addLanguage(langName) {
-        const li = document.createElement('li');
-        li.innerHTML = `${langName}`
-        document.querySelector('.language').appendChild(li)
+    const sayDate = function(str){
+        // console.log(str, Date.now());
     }
-    addLanguage('python')
-    addLanguage('php')
-    addLanguage('goLang')
 
-    function optimise(langName){
-        const li = document.createElement('li');
-        li.appendChild(document.createTextNode(langName))
-        document.querySelector('.language').appendChild(li)
-        
-    }
-    optimise('Blockchain')
+    // const intervalId = setInterval(sayDate, 2000, 'Yugant')
 
+    document.querySelector("#stop").addEventListener('click', function(){
+        // clearInterval(intervalId);
+        // console.log("Stopped")
+    })
 
-  const liText = document.querySelector('li:nth-child(2)')
-  console.log(liText)
+    document.querySelector("#start").addEventListener('click', function(){
+        // const intervalId = setInterval(sayDate, 2000, 'Yugant')
+    })
+    
+    
 </script>
 </html>
